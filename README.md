@@ -30,8 +30,8 @@ npm run lint
 npm run test:unit
 ```
 ### ViewInBrowser
-```
+
 <a href="https://6224dab0746bad1e98fc517e--practical-wing-925166.netlify.app">View</a>
-```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
