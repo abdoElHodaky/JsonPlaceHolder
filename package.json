@@ -38,7 +38,7 @@
     "vue-template-compiler": "^2.6.10",
     "vuetify-loader": "^1.0.5"
   }
-  ,"engine":{
-    "node":"12.12.1"
+  ,"engines":{
+    "node":"12.12.0"
   }
 }
