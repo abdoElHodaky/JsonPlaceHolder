@@ -92,7 +92,7 @@ export default {
     async created () {
       await this.load()
     },
-   methods:{
+   methods: {
      
     async load(){
        const response = await getComments(10);
@@ -107,6 +107,6 @@ export default {
             this.comments = [];
         }
      }
-   },
+   }
 };
 </script>
