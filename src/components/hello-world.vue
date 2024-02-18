@@ -46,13 +46,12 @@
                 color="primary"
                 dark
                 absolute
-                top
+                bottom
                 right
                 fab
                 v-bind="attrs"
                 v-on="on" 
               >
-               <span class="mr-2"></span>
                 <v-icon>mdi-plus</v-icon>
               </v-btn>
             </v-fab-transition>
