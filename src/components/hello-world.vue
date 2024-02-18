@@ -130,11 +130,12 @@ export default {
      
     async load(){
       
-       const response = await getComments(20);
+       const response = await getComments(10);
         this.status.requestOccured = true;
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
+            this.id=this.comments.pop().id
         } else {
             this.status.success = false;
             this.status.errorMessage = response.error;
