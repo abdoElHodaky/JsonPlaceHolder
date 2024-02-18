@@ -142,7 +142,7 @@ export default {
         }
      },
       
-      addcomment(){
+    async addcomment(){
         await this.comments.push({
           id:this.commentnum++,
           email:this.comment.email,
