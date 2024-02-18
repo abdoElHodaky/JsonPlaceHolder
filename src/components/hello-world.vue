@@ -4,10 +4,12 @@
             text-xs-center
             wrap>
             <v-flex xs12>
-                <v-data-table
+                <v-infinite-scroll
                     class="elevation-1"
-                    :headers="headers"
-                    :items="comments">
+                    :height=100
+                    :items="comments"
+                    :onLoad="load"
+                    >
                     <template
                         v-if="status.success"
                         v-slot:items="props">
@@ -32,7 +34,7 @@
                             Sorry, nothing to display here :(
                         </v-alert>
                     </template>
-                </v-data-table>
+                </<v-infinite-scroll>
             </v-flex>
         </v-layout>
     </v-container>
@@ -88,7 +90,11 @@ export default {
         },
     },
     async created () {
-        const response = await getComments(100);
+      await  this.load()
+    },
+   methods:{
+    async load(){
+       const response = await getComments(100);
         this.status.requestOccured = true;
 
         if (response.success) {
@@ -99,6 +105,7 @@ export default {
             this.status.errorMessage = response.error;
             this.comments = [];
         }
-    },
+     }
+   }
 };
 </script>
