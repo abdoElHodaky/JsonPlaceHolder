@@ -35,6 +35,19 @@
                         </v-alert>
                     </template>
                 </v-data-table>
+
+              <v-fab-transition>
+              <v-btn
+                color="primary"
+                dark
+                absolute
+                top
+                right
+                fab
+              >
+                <v-icon>mdi-plus</v-icon>
+              </v-btn>
+            </v-fab-transition>
             </v-flex>
         </v-layout>
     </v-container>
