@@ -95,7 +95,7 @@ export default {
    methods:{
      
     async load(){
-       const response = await getComments(100);
+       const response = await getComments(10);
         this.status.requestOccured = true;
 
         if (response.success) {
