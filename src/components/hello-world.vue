@@ -103,7 +103,7 @@
           <v-btn
             color="blue darken-1"
             text
-            @click="addcomment()"
+            @click="()=> addcomment()"
           >
             Close
           </v-btn>
