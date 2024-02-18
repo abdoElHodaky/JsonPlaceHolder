@@ -103,7 +103,7 @@
           <v-btn
             color="blue darken-1"
             text
-            @click=" dialog=!dialog"
+            @click=" dialog=false"
           >
             Close
           </v-btn>
@@ -155,6 +155,8 @@ export default {
           email:this.comment.email,
           body:this.comment.message
         })
+        this.dialog=false
+        this.
      // this.load()
       }
      
