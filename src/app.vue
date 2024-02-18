@@ -43,12 +43,14 @@
               
               <v-col cols="12">
                 <v-text-field
+                  v-model="comment.email"
                   label="Email*"
                   required
                 ></v-text-field>
               </v-col>
               <v-col cols="12">
                 <v-text-field
+                  v-model="comment.message"
                   label="Message*"
                   type="textarea"
                   required
@@ -97,7 +99,8 @@ export default {
     name: 'App',
     data () {
         return {
-            dialog:false
+            dialog:false,
+            comment:{}
         };
     },
 };
