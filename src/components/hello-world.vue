@@ -205,7 +205,7 @@ export default {
     async created () {
       
       let comments=JSON.parse(localStorage.getItem("comments"))
-      if(comments!={}){
+      if(comments){
         this.comments=comments
       }
       else{
