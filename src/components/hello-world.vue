@@ -67,7 +67,12 @@ export default {
      },
       
       async addcomment(){
-        console.log(this.comment)
+        await this.comments.push({
+          id:this.comments.last().id+1,
+          email:this.comment.email
+          message:this.comment.message
+        })
+     // this.load()
       }
      
     },
