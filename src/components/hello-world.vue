@@ -110,7 +110,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-              <!--p>{{comments}}</p>-->
+              <p>{{localStorage.getItem("comments")}}</p>
             </v-flex>
         </v-layout>
     </v-container>
