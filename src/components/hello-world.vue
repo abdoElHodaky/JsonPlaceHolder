@@ -34,7 +34,7 @@
                             Sorry, nothing to display here :(
                         </v-alert>
                     </template>
-                </<v-infinite-scroll>
+                </v-infinite-scroll>
             </v-flex>
         </v-layout>
     </v-container>
