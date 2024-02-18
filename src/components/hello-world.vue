@@ -207,7 +207,7 @@ export default {
         },
     },
     async created () {
-     // await this.load()
+      await this.load()
       console.log(this.comment)
     }
 };
