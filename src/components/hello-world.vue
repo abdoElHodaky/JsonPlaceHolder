@@ -6,7 +6,7 @@
             <v-flex xs12>
                 <v-infinite-scroll
                     class="elevation-1"
-                    :height=100
+                    :height="100"
                     :items="comments"
                     :onLoad="load"
                     >
