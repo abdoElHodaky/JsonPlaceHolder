@@ -4,11 +4,11 @@
             text-xs-center
             wrap>
             <v-flex xs12>
-                <v-infinite-scroll
+                <v-data-table
                     class="elevation-1"
-                    :height="100"
+                    :headers="headers"
                     :items="comments"
-                    :onLoad="load"
+                    
                     >
                     <template
                         v-if="status.success"
@@ -34,7 +34,7 @@
                             Sorry, nothing to display here :(
                         </v-alert>
                     </template>
-                </v-infinite-scroll>
+                </v-data-table>
             </v-flex>
         </v-layout>
     </v-container>
