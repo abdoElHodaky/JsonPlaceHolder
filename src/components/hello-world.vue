@@ -151,7 +151,7 @@ export default {
       
       async addcomment(){
         await this.comments.push({
-          id:this.comments.pop().id+1,
+          id:this.commentnum++,
           email:this.comment.email,
           body:this.comment.message
         })
@@ -182,6 +182,7 @@ export default {
                 },
             ],
             comments: [],
+            commentnum:1,
             comment:{},
             dialog:false,
             status: {
@@ -201,7 +202,7 @@ export default {
         },
     },
     async created () {
-      await this.load()
+     // await this.load()
       console.log(this.comment)
     }
 };
