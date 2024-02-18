@@ -6,13 +6,13 @@
                 <span class="font-weight-light"></span>
             </v-toolbar-title>
             <v-spacer />
-            <!--v-btn
+            <v-btn
                 flat
-                href="https://github.com/vuetifyjs/vuetify/releases/latest"
+                href=""
                 target="_blank">
-                <span class="mr-2">Latest Release</span>
-                <v-icon>mdi-open-in-new</v-icon>
-            </v-btn-->
+                <span class="mr-2"></span>
+                <v-icon>mdi-plus</v-icon>
+            </v-btn>
         </v-toolbar>
 
         <v-content>
