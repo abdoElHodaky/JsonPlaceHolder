@@ -39,7 +39,7 @@
     "vuetify-loader": "^1.0.5"
   }
   ,"engine":{
-    "node":"12.12.0"
+    "node":"8.12.0"
   }
   
 }
