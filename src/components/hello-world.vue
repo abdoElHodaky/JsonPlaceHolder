@@ -135,7 +135,7 @@ export default {
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
-            
+            localStorage.setItem("comments",comments)
             this.id=this.comments.slice(-1).id
         } else {
             this.status.success = false;
