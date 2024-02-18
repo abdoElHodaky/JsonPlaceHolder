@@ -69,7 +69,7 @@
           <v-btn
             color="blue darken-1"
             text
-            @click="dialog = false"
+            @click="addcomment"
           >
             Close
           </v-btn>
