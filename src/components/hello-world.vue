@@ -183,6 +183,7 @@ export default {
             ],
             comments: [],
             comment:{},
+            dialog:false,
             status: {
                 requestOccured: false,
                 success: false,
