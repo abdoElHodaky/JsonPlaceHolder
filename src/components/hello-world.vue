@@ -65,6 +65,7 @@ export default {
             this.comments = [];
         }
      }
+      
       async addcomment(){
         console.log(this.comment)
       }
