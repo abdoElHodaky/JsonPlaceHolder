@@ -49,6 +49,23 @@ export default {
         lower (original) {
             return original.toLowerCase();
         },
+    }
+    methods: {
+     
+    async load(){
+       const response = await getComments(10);
+        this.status.requestOccured = true;
+
+        if (response.success) {
+            this.status.success = true;
+            this.comments = response.comments;
+        } else {
+            this.status.success = false;
+            this.status.errorMessage = response.error;
+            this.comments = [];
+        }
+     }
+     
     },
     data () {
         return {
@@ -91,22 +108,6 @@ export default {
     },
     async created () {
       await this.load()
-    },
-   methods: {
-     
-    async load(){
-       const response = await getComments(10);
-        this.status.requestOccured = true;
-
-        if (response.success) {
-            this.status.success = true;
-            this.comments = response.comments;
-        } else {
-            this.status.success = false;
-            this.status.errorMessage = response.error;
-            this.comments = [];
-        }
-     }
-   }
+    }
 };
 </script>
