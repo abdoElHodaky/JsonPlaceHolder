@@ -135,7 +135,7 @@ export default {
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
-            localStorage.setItem("comments",comments)
+            localStorage.setItem("comments",JSON.stringify(comments))
             this.commentnum=this.comments.slice(-1).id
         } else {
             this.status.success = false;
@@ -151,7 +151,7 @@ export default {
           body:this.comment.message
         })
         this.dialog=false
-        localStorage.setItem("comments",comments)
+        localStorage.setItem("comments",JSON.stringify(comments))
        // this.
      // this.load()
       }
@@ -203,7 +203,8 @@ export default {
         },
     },
     async created () {
-      let comments=localStorage.getItem("comments")
+      
+      let comments=JSON.parse(localStorage.getItem("comments"))
       if(comments!=undefined){
         this.comments=comments
       }
