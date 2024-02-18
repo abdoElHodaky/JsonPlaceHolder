@@ -53,9 +53,9 @@ export default {
     methods: {
      
     async load(){
+      
        const response = await getComments(10);
         this.status.requestOccured = true;
-
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
@@ -64,7 +64,7 @@ export default {
             this.status.errorMessage = response.error;
             this.comments = [];
         }
-     }
+     },
       
       async addcomment(){
         console.log(this.comment)
