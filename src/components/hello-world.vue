@@ -149,7 +149,7 @@ export default {
           body:this.comment.message
         })
         this.dialog=false
-        this.
+       // this.
      // this.load()
       }
      
