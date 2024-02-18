@@ -103,7 +103,7 @@
           <v-btn
             color="blue darken-1"
             text
-            @click="()=> addcomment()"
+            @click="addcomment"
           >
             Close
           </v-btn>
@@ -149,7 +149,7 @@ export default {
         }
      },
       
-      async addcomment(){
+      addcomment(){
         await this.comments.push({
           id:this.commentnum++,
           email:this.comment.email,
