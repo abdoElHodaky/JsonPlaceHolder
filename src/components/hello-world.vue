@@ -183,6 +183,7 @@ export default {
                 },
             ],
             comments: [],
+            comment:{},
             status: {
                 requestOccured: false,
                 success: false,
