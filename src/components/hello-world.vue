@@ -63,7 +63,7 @@
         <v-card-text>
           <v-container>
             <v-row>
-              <v-col
+              <!--v-col
                 cols="12"
                 sm="6"
                 md="4"
@@ -72,7 +72,7 @@
                   label="number"
                   required
                 ></v-text-field>
-              </v-col>
+              </v-col-->
               <v-col
               
               <v-col cols="12">
