@@ -90,9 +90,10 @@ export default {
         },
     },
     async created () {
-      await  this.load()
+      await this.load()
     },
    methods:{
+     
     async load(){
        const response = await getComments(100);
         this.status.requestOccured = true;
@@ -106,6 +107,6 @@ export default {
             this.comments = [];
         }
      }
-   }
+   },
 };
 </script>
