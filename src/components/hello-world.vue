@@ -103,14 +103,14 @@
           <v-btn
             color="blue darken-1"
             text
-            @click="addcomment"
+            @click=" dialog=!dialog"
           >
             Close
           </v-btn>
           <v-btn
             color="blue darken-1"
             text
-            @click="dialog = false"
+            @click="addcomment"
           >
             Save
           </v-btn>
