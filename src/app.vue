@@ -6,7 +6,7 @@
                 <span class="font-weight-light"></span>
             </v-toolbar-title>
             <v-spacer />
-             <v-dialog
+             <!--v-dialog
       v-model="dialog"
       persistent
       max-width="600px"
@@ -82,7 +82,7 @@
           </v-btn>
         </v-card-actions>
       </v-card>
-    </v-dialog>
+    </v-dialog-->
 
           
         </v-toolbar>
