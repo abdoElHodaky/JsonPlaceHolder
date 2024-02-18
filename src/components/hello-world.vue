@@ -49,7 +49,7 @@ export default {
         lower (original) {
             return original.toLowerCase();
         },
-    }
+    },
     methods: {
      
     async load(){
