@@ -69,8 +69,8 @@ export default {
       async addcomment(){
         await this.comments.push({
           id:this.comments.pop().id+1,
-          email:this.comment.email
-          message:this.comment.message
+          email:this.comment.email,
+          body:this.comment.message
         })
      // this.load()
       }
