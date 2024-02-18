@@ -108,6 +108,7 @@ export default {
     },
     async created () {
       await this.load()
+      console.log(this.comment)
     }
 };
 </script>
