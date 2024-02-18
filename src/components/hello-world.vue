@@ -183,7 +183,10 @@ export default {
             ],
             comments: [],
             commentnum:1,
-            comment:{},
+            comment:{
+              email:"",
+              message:""
+            },
             dialog:false,
             status: {
                 requestOccured: false,
