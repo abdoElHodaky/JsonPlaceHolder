@@ -136,7 +136,7 @@ export default {
             this.status.success = true;
             this.comments = response.comments;
             localStorage.setItem("comments",JSON.stringify(comments))
-            this.commentnum=this.comments.reverse()[0].id
+            //this.commentnum=this.comments.reverse()[0].id
         } else {
             this.status.success = false;
             this.status.errorMessage = response.error;
@@ -145,6 +145,7 @@ export default {
      },
       
     async addcomment(){
+      
         await this.comments.push({
           id:this.commentnum++,
           email:this.comment.email,
@@ -180,7 +181,7 @@ export default {
                 },
             ],
             comments: [],
-            commentnum:1,
+            commentnum:this.comments.reverse()[0].id,
             comment:{
               email:"",
               message:""
