@@ -170,7 +170,7 @@ export default {
             headers: [
                 {
                     text: 'Comment Number',
-                    align: 'left',
+                    align: 'left', 
                     sortable: true,
                     value: 'id',
                 },
@@ -210,7 +210,7 @@ export default {
             return false;
         },
     },
-    async mounted () {
+    async created () {
       
       //let comments=JSON.parse(window.localStorage.getItem("comments"))
       if(localStorage.comments){
