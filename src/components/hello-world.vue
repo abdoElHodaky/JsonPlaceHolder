@@ -183,7 +183,7 @@ export default {
      },
       
     async addcomment(){
-       let id=this.commentnum
+       
       if(this.editinx>-1){
         Object.assign(this.comments[this.editinx],this.comment)
         this.comment={email:"", body:""}
@@ -191,6 +191,7 @@ export default {
        // this.dialog=false
       }
       else{
+        let id=this.commentnum
         await this.comments.push({
           id:id,
           email:this.comment.email,
