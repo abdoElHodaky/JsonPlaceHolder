@@ -23,7 +23,7 @@
                         <td class="text-xs-left">
                             {{ props.item.body }}
                         </td>
-                      <td>
+                      <td class="text-xs-left">
                       <v-icon
                      small
                      class="mr-2"
@@ -31,8 +31,8 @@
                      >
                     mdi-pencil
                     </v-icon>
-                      </td>
-                     <td>   
+                      
+                     
                     <v-icon
                     small
                     @click="deleteItem(props.item)"
