@@ -187,6 +187,7 @@ export default {
       if(editinx>-1){
         Object.assign(this.comments[this.editinx],this.comment)
         this.comment={email:"", body:""}
+        this.editinx=-1
         
       }
       else{
