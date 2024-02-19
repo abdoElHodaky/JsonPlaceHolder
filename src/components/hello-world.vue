@@ -25,7 +25,8 @@
                         </td>
                     </template>
                     <template v-slot:item.actions="{ item }">
-                    <v-icon
+                    <td>
+                      <v-icon
                      small
                      class="mr-2"
                      @click="editItem(item)"
@@ -38,6 +39,7 @@
                      >
                      mdi-delete
                      </v-icon>
+                    </td>
                      </template>
                     <template
                         v-if="showErrorMessage"
