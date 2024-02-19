@@ -117,7 +117,7 @@
               </v-col>
               <v-col cols="12">
                 <v-text-field
-                  v-model="comment.message"
+                  v-model="comment.body"
                   label="Message*"
                   type="textarea"
                   required
@@ -230,7 +230,7 @@ export default {
            commentnum:1,
             comment:{
               email:"",
-              message:""
+              body:""
             },
             dialog:false,
             status: {
