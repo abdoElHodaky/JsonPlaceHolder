@@ -184,6 +184,12 @@ export default {
       
     async addcomment(){
        let id=this.commentnum
+      if(editinx>-1){
+        Object.assign(this.comments[this.editinx],this.comment)
+        this.comment={email:"", body:""}
+        
+      }
+      else{
         await this.comments.push({
           id:id,
           email:this.comment.email,
@@ -191,14 +197,21 @@ export default {
         })
         this.commentnum+=1
         localStorage.comments=JSON.stringify(this.comments)
-        this.dialog=false
+        
        // window.localStorage.setItem("comments",JSON.stringify(comments))
        // this.
        this.load()
+       }
+      this.dialog=false
       },
-    async deleteItem(item){},
+    async deleteItem(item){
+      let inx=this.comments.indexOf(item)
+      this.comments.splice(inx,1)
+    },
     async editItem(item){
+      let inx=this.comments.indexOf(item)
       this.comment=item
+      this.editinx=inx
       this.dialog=true
     }
      
@@ -228,6 +241,7 @@ export default {
             ],
             comments: [],
            commentnum:1,
+           editindex:-1,
             comment:{
               email:"",
               body:""
