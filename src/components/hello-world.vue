@@ -188,7 +188,7 @@ export default {
         Object.assign(this.comments[this.editinx],this.comment)
         this.comment={email:"", body:""}
         this.editinx=-1
-        
+        this.dialog=false
       }
       else{
         await this.comments.push({
@@ -197,14 +197,14 @@ export default {
           body:this.comment.message
         })
         this.commentnum+=1
-        
+        this.dialog=false
         
        // window.localStorage.setItem("comments",JSON.stringify(comments))
        // this.
        this.load()
        }
       localStorage.comments=JSON.stringify(this.comments)
-      this.dialog=false
+      
       },
     async deleteItem(item){
       let inx=this.comments.indexOf(item)
