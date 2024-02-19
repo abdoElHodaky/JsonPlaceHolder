@@ -98,10 +98,7 @@
 export default {
     name: 'App',
     data () {
-        return {
-            dialog:false,
-            comment:{}
-        };
+      return {}
     },
 };
 
