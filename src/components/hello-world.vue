@@ -210,7 +210,7 @@ export default {
             return false;
         },
     },
-    async created () {
+    async mounted () {
       
       //let comments=JSON.parse(window.localStorage.getItem("comments"))
       if(localStorage.comments){
