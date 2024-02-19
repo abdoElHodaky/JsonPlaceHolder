@@ -204,8 +204,9 @@ export default {
        
        }
        this.dialog=false
-       this.load()
       localStorage.comments=JSON.stringify(this.comments)
+       this.load()
+      
       
       },
     async deleteItem(item){
