@@ -173,7 +173,7 @@ export default {
             let id=response.comments.reverse()[0].id
             //window.localStorage.setItem("comments",JSON.stringify(comments))
             
-            this.commentnum=(this.commentnum>id)?this.commentnum:id
+            this.commentnum=(this.commentnum==id)?this.commentnum:id
         } else {
             this.status.success = false;
             this.status.errorMessage = response.error;
