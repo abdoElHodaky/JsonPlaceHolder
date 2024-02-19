@@ -241,7 +241,7 @@ export default {
             ],
             comments: [],
            commentnum:1,
-           editindex:-1,
+           editinx:-1,
             comment:{
               email:"",
               body:""
