@@ -187,7 +187,7 @@ export default {
        // this.dialog=false
       }
       else{
-        //this.commentnum=(this.commentnum==
+        this.commentnum=(this.commentnum==this.comments.length)?(this.commentnum+1):this.comments.length
         //this.commentnum+=1
         await this.comments.push({
           id:this.commentnum,
