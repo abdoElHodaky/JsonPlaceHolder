@@ -137,8 +137,10 @@ export default {
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
+            let id=response.comments.reverse()[0].id
             //window.localStorage.setItem("comments",JSON.stringify(comments))
-            this.commentnum=response.comments.reverse()[0].id
+            
+            this.commentnum=(this.commentnum>id)?this.commentnum:id
         } else {
             this.status.success = false;
             this.status.errorMessage = response.error;
@@ -148,12 +150,13 @@ export default {
      },
       
     async addcomment(){
-      
+       let id=this.commentnum
         await this.comments.push({
-          id:this.commentnum+1,
+          id:id,
           email:this.comment.email,
           body:this.comment.message
         })
+        id+=1
         localStorage.comments=JSON.stringify(this.comments)
         this.dialog=false
        // window.localStorage.setItem("comments",JSON.stringify(comments))
