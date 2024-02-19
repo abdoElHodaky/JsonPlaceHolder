@@ -188,7 +188,7 @@ export default {
         Object.assign(this.comments[this.editinx],this.comment)
         this.comment={email:"", body:""}
         this.editinx=-1
-        this.dialog=false
+       // this.dialog=false
       }
       else{
         await this.comments.push({
@@ -203,6 +203,7 @@ export default {
        // this.
        this.load()
        }
+      
       localStorage.comments=JSON.stringify(this.comments)
       
       },
