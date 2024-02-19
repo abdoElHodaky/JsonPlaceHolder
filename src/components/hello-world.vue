@@ -25,21 +25,27 @@
                         </td>
                       
                       <td class="text-xs-left">
+                        <v-btn @click="editItem(props.item)"
+                          class="mr-2"
+                          >
                       <v-icon
                      small
-                     class="mr-2"
-                     @click="editItem(props.item)"
+                     
+                     
                      >
                     mdi-pencil
                     </v-icon>
-                      
-                     
+                    </v-btn>  
+                    <v-btn
+                      @click="deleteItem(props.item)"
+                      >
                     <v-icon
                     small
-                    @click="deleteItem(props.item)"
+                    
                      >
                      mdi-delete
                      </v-icon>
+                    </v-btn>
                      </td>
                      
                       
