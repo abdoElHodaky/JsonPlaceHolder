@@ -187,7 +187,10 @@ export default {
        this.load()
       },
     async deleteItem(item){},
-    async editItem(item){}
+    async editItem(item){
+      this.comment=item
+      this.dialog=true
+    }
      
     },
     data () {
