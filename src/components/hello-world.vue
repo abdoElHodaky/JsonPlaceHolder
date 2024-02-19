@@ -156,7 +156,7 @@ export default {
           email:this.comment.email,
           body:this.comment.message
         })
-        id+=1
+        this.commentnum+=1
         localStorage.comments=JSON.stringify(this.comments)
         this.dialog=false
        // window.localStorage.setItem("comments",JSON.stringify(comments))
