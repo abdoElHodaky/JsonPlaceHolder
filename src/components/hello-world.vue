@@ -175,7 +175,7 @@ export default {
             let id=this.comments.length
             //window.localStorage.setItem("comments",JSON.stringify(comments))
             
-            this.commentnum=(this.commentnum==id)?this.commentnum:id
+            this.commentnum=(this.commentnum==id)?(this.commentnum+1):id
         } else {
             this.status.success = false;
             this.status.errorMessage = response.error;
@@ -199,7 +199,7 @@ export default {
           email:this.comment.email,
           body:this.comment.body
         })
-        this.commentnum+=1
+        //this.commentnum+=1
        // this.dialog=false
         
        // window.localStorage.setItem("comments",JSON.stringify(comments))
