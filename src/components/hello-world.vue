@@ -136,7 +136,7 @@ export default {
             this.status.success = true;
             this.comments = response.comments;
             localStorage.setItem("comments",JSON.stringify(comments))
-            this.commentnum=this.comments[this.comments.length-1].id
+            this.commentnum=this.comments.reverse()[0].id
         } else {
             this.status.success = false;
             this.status.errorMessage = response.error;
