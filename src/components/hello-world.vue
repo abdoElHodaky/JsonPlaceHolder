@@ -197,12 +197,13 @@ export default {
           body:this.comment.message
         })
         this.commentnum+=1
-        localStorage.comments=JSON.stringify(this.comments)
+        
         
        // window.localStorage.setItem("comments",JSON.stringify(comments))
        // this.
        this.load()
        }
+      localStorage.comments=JSON.stringify(this.comments)
       this.dialog=false
       },
     async deleteItem(item){
