@@ -205,6 +205,7 @@ export default {
                     sortable: true,
                     value: 'body',
                 },
+                { text: 'Actions', value: 'actions', sortable: false }
             ],
             comments: [],
            commentnum:1,
