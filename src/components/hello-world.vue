@@ -129,19 +129,22 @@ export default {
     methods: {
      
     async load(){
-      
+      if(localStorage.comments)
+      { this.comments=JSON.parse(localStorage.comments)}
+      else{
        const response = await getComments(10);
         this.status.requestOccured = true;
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
-            window.localStorage.setItem("comments",JSON.stringify(comments))
+            //window.localStorage.setItem("comments",JSON.stringify(comments))
             this.commentnum=response.comments.reverse()[0].id
         } else {
             this.status.success = false;
             this.status.errorMessage = response.error;
             this.comments = [];
         }
+      }
      },
       
     async addcomment(){
@@ -151,10 +154,11 @@ export default {
           email:this.comment.email,
           body:this.comment.message
         })
+        localStorage.comments=JSON.stringify(this.comments)
         this.dialog=false
-        window.localStorage.setItem("comments",JSON.stringify(comments))
+       // window.localStorage.setItem("comments",JSON.stringify(comments))
        // this.
-     // this.load()
+       this.load()
       }
      
     },
@@ -203,11 +207,11 @@ export default {
             return false;
         },
     },
-    async created () {
+    async mounted () {
       
-      let comments=JSON.parse(window.localStorage.getItem("comments"))
-      if(comments){
-        this.comments=comments
+      //let comments=JSON.parse(window.localStorage.getItem("comments"))
+      if(localStorage.comments){
+        localStorage.comments=JSON.stringify(this.comments)
       }
       else{
       await this.load()}
