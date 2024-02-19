@@ -163,14 +163,16 @@ export default {
      
     async load(){
       if(localStorage.comments)
-      { this.comments=JSON.parse(localStorage.comments)}
+      { this.comments=JSON.parse(localStorage.comments)
+       this.commentnum=this.comments.length
+      }
       else{
        const response = await getComments(15);
         this.status.requestOccured = true;
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
-            let id=this.comments.reverse()[0].id
+            let id=this.comments.length
             //window.localStorage.setItem("comments",JSON.stringify(comments))
             
             this.commentnum=(this.commentnum==id)?this.commentnum:id
