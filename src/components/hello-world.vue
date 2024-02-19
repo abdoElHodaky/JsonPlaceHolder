@@ -193,7 +193,8 @@ export default {
        // this.dialog=false
       }
       else{
-       // let id=this.commentnum
+        //this.commentnum=(this.commentnum==
+        this.commentnum+=1
         await this.comments.push({
           id:this.commentnum,
           email:this.comment.email,
