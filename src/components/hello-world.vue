@@ -191,9 +191,9 @@ export default {
        // this.dialog=false
       }
       else{
-        let id=this.commentnum
+       // let id=this.commentnum
         await this.comments.push({
-          id:id,
+          id:this.commentnum,
           email:this.comment.email,
           body:this.comment.body
         })
