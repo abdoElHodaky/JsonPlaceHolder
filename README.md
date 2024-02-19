@@ -1,4 +1,4 @@
-# vuetify-example
+# vuetify-Task
 
 ## Project setup
 ```
@@ -31,7 +31,7 @@ npm run test:unit
 ```
 ### ViewInBrowser
 
-<a href="https://jsonplace-holder.netlify.app">View</a>
+<a href="https://jsonplace.onrender.com/">View</a>
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
