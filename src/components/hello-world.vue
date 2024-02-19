@@ -30,13 +30,9 @@
                           flat
                           small
                           >
-                      <v-icon
-                     small
-                     
-                     
-                     >
-                    mdi-pencil
-                    </v-icon>
+                      <v-icon small >
+                       mdi-pencil
+                      </v-icon>
                     </v-btn>  
                     <v-btn
                       @click="deleteItem(props.item)"
@@ -44,9 +40,7 @@
                       small
                       >
                     <v-icon
-                    small
-                    
-                     >
+                    small >
                      mdi-delete
                      </v-icon>
                     </v-btn>
