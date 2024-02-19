@@ -23,13 +23,11 @@
                         <td class="text-xs-left">
                             {{ props.item.body }}
                         </td>
-                      <tr>
-                      <template v-slot:item.actions="{ item }">
                       <td>
                       <v-icon
                      small
                      class="mr-2"
-                     @click="editItem(item)"
+                     @click="editItem(props.item)"
                      >
                     mdi-pencil
                     </v-icon>
@@ -37,13 +35,13 @@
                      <td>   
                     <v-icon
                     small
-                    @click="deleteItem(item)"
+                    @click="deleteItem(props.item)"
                      >
                      mdi-delete
                      </v-icon>
                      </td>
-                     </template>
-                      </tr>
+                     
+                      
                     </template>
                     
                     
