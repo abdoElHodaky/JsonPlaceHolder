@@ -194,13 +194,13 @@ export default {
       }
       else{
         //this.commentnum=(this.commentnum==
-        this.commentnum+=1
+        //this.commentnum+=1
         await this.comments.push({
           id:this.commentnum,
           email:this.comment.email,
           body:this.comment.body
         })
-        //this.commentnum+=1
+        this.commentnum+=1
        // this.dialog=false
         
        // window.localStorage.setItem("comments",JSON.stringify(comments))
