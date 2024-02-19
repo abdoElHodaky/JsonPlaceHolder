@@ -150,7 +150,7 @@ export default {
     async addcomment(){
       
         await this.comments.push({
-          id:this.commentnum++,
+          id:this.commentnum+1,
           email:this.comment.email,
           body:this.comment.message
         })
