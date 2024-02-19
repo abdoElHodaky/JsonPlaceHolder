@@ -135,8 +135,8 @@ export default {
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
-            localStorage.setItem("comments",JSON.stringify(comments))
-            //this.commentnum=this.comments.reverse()[0].id
+            window.localStorage.setItem("comments",JSON.stringify(comments))
+            this.commentnum=response.comments.reverse()[0].id
         } else {
             this.status.success = false;
             this.status.errorMessage = response.error;
@@ -152,7 +152,7 @@ export default {
           body:this.comment.message
         })
         this.dialog=false
-        localStorage.setItem("comments",JSON.stringify(comments))
+        window.localStorage.setItem("comments",JSON.stringify(comments))
        // this.
      // this.load()
       }
@@ -181,7 +181,7 @@ export default {
                 },
             ],
             comments: [],
-            commentnum:this.comments.reverse()[0].id,
+           commentnum:1,
             comment:{
               email:"",
               message:""
@@ -205,7 +205,7 @@ export default {
     },
     async created () {
       
-      let comments=JSON.parse(localStorage.getItem("comments"))
+      let comments=JSON.parse(window.localStorage.getItem("comments"))
       if(comments){
         this.comments=comments
       }
