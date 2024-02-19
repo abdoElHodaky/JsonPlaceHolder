@@ -23,7 +23,7 @@
                         <td class="text-xs-left">
                             {{ props.item.body }}
                         </td>
-                      <template v-slot:item.actions="{ props.item }">
+                      
                       <td class="text-xs-left">
                       <v-icon
                      small
@@ -41,7 +41,7 @@
                      mdi-delete
                      </v-icon>
                      </td>
-                     </template>
+                     
                       
                     </template>
                     
