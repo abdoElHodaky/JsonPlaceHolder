@@ -116,7 +116,7 @@
                 ></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-textarea>
+                <v-textarea
                   v-model="comment.body"
                   label="Message*"
                   type="textarea"
@@ -143,7 +143,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-             <!-- <p>{{comments}}</p>-->
+              <p>{{comments}}</p>
             </v-flex>
         </v-layout>
     </v-container>
@@ -184,11 +184,11 @@ export default {
       
     async addcomment(){
        let id=this.commentnum
-      if(editinx>-1){
+      if(this.editinx>-1){
         Object.assign(this.comments[this.editinx],this.comment)
         this.comment={email:"", body:""}
         this.editinx=-1
-       // this.dialog=false
+        this.dialog=false
       }
       else{
         await this.comments.push({
