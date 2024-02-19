@@ -195,7 +195,7 @@ export default {
         await this.comments.push({
           id:id,
           email:this.comment.email,
-          body:this.comment.message
+          body:this.comment.body
         })
         this.commentnum+=1
        // this.dialog=false
