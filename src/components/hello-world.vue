@@ -24,6 +24,21 @@
                             {{ props.item.body }}
                         </td>
                     </template>
+                    <template v-slot:item.actions="{ item }">
+                    <v-icon
+                     small
+                     class="mr-2"
+                     @click="editItem(item)"
+                     >
+                    mdi-pencil
+                    </v-icon>
+                    <v-icon
+                    small
+                    @click="deleteItem(item)"
+                     >
+                     mdi-delete
+                     </v-icon>
+                     </template>
                     <template
                         v-if="showErrorMessage"
                         v-slot:no-data>
@@ -162,7 +177,9 @@ export default {
        // window.localStorage.setItem("comments",JSON.stringify(comments))
        // this.
        this.load()
-      }
+      },
+    async deleteItem(item){},
+    async editItem(item){}
      
     },
     data () {
