@@ -116,12 +116,12 @@
                 ></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-text-field
+                <v-textarea>
                   v-model="comment.body"
                   label="Message*"
                   type="textarea"
                   required
-                ></v-text-field>
+                ></v-textarea>
               </v-col>
               <v-col
                 cols="12"
