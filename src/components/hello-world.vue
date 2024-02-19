@@ -132,7 +132,7 @@ export default {
       if(localStorage.comments)
       { this.comments=JSON.parse(localStorage.comments)}
       else{
-       const response = await getComments(10);
+       const response = await getComments(15);
         this.status.requestOccured = true;
         if (response.success) {
             this.status.success = true;
