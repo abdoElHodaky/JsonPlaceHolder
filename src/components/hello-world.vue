@@ -27,6 +27,8 @@
                       <td class="text-xs-left">
                         <v-btn @click="editItem(props.item)"
                           class="mr-2"
+                          flat
+                          small
                           >
                       <v-icon
                      small
@@ -38,6 +40,8 @@
                     </v-btn>  
                     <v-btn
                       @click="deleteItem(props.item)"
+                      flat 
+                      small
                       >
                     <v-icon
                     small
