@@ -24,9 +24,9 @@
                             {{ props.item.body }}
                         </td>
                     </template>
-                    <td>
-                    <template v-slot:item.actions="{ item }">
                     
+                    <template v-slot:item.actions="{ item }">
+                    <td>
                       <v-icon
                      small
                      class="mr-2"
@@ -34,15 +34,17 @@
                      >
                     mdi-pencil
                     </v-icon>
+                      </td>
+                        <td>
                     <v-icon
                     small
                     @click="deleteItem(item)"
                      >
                      mdi-delete
                      </v-icon>
-                    
+                    </td>
                      </template>
-                      </td>
+                      
                     <template
                         v-if="showErrorMessage"
                         v-slot:no-data>
