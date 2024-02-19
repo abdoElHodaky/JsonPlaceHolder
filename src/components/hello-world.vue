@@ -170,7 +170,7 @@ export default {
         if (response.success) {
             this.status.success = true;
             this.comments = response.comments;
-            let id=response.comments.reverse()[0].id
+            let id=this.comments.reverse()[0].id
             //window.localStorage.setItem("comments",JSON.stringify(comments))
             
             this.commentnum=(this.commentnum==id)?this.commentnum:id
@@ -213,6 +213,7 @@ export default {
     async deleteItem(item){
       let inx=this.comments.indexOf(item)
       this.comments.splice(inx,1)
+      this.commentnum-=1
     },
     async editItem(item){
       let inx=this.comments.indexOf(item)
