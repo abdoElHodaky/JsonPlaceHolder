@@ -31,7 +31,7 @@ npm run test:unit
 ```
 ### ViewInBrowser
 
-<a href="https://jsonplace.onrender.com/">View</a>
+<a href="https://jsonplacehold.onrender.com/">View</a>
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
